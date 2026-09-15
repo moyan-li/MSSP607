@@ -6,6 +6,7 @@ repo_root = Path("/workspaces/MSSP607/")
 
 # Root-level folders
 root_folders = [
+    "WeeklyModules,"
     "Assignments",
     "data"
 ]
