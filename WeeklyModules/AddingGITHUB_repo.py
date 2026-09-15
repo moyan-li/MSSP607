@@ -1,0 +1,19 @@
+from pathlib import Path
+from git import Repo 
+
+#--- setup ---------------------------------------------------------------
+repo_path = Path("/workspaces/MSSP-607/")     # path to your local clone
+folder     = repo_path/"WeeklyModules/Week05"   # folder you want to add
+commit_msg = "Add Weekly Examples folder with placeholder"
+
+# --- create the folder & placeholder -------------------------------------
+folder.mkdir(parents=True, exist_ok=True)
+(folder / ".gitkeep").touch()               # ensures Git tracks an empty dir
+
+# --- stage, commit, push --------------------------------------------------
+repo = Repo(repo_path)
+repo.index.add([str(p.relative_to(repo_path)) for p in folder.rglob("*")])
+repo.index.commit(commit_msg)
+
+origin = repo.remote(name="origin")
+origin.push()             
