@@ -2,7 +2,7 @@ from pathlib import Path
 from git import Repo 
 
 # Repository root (current working directory)
-repo_root = Path("/workspaces/MSSP-607/")
+repo_root = Path("/workspaces/MSSP607/")
 
 # Root-level folders
 root_folders = [
