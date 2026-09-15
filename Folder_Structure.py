@@ -1,7 +1,7 @@
 from pathlib import Path
 
 # Repository root (current working directory)
-repo_root = Path.cwd()
+repo_root = Path("/workspaces/MSSP-607/")
 
 # Root-level folders
 root_folders = [
@@ -22,4 +22,3 @@ for week_num in range(1, 15):
     week_folder.mkdir(parents=True, exist_ok=True)
 
 print("Folder structure created successfully!")
-`
